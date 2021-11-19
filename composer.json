@@ -1,0 +1,25 @@
+{
+  "name": "opendev/alf",
+  "description": "A cli app for reading bible verset online",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "bensonirah",
+      "email": "bensonirah@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "require": {
+    "symfony/console": "^5.3",
+    "guzzlehttp/guzzle": "^7.0",
+    "symfony/var-dumper": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alf\\": "src/Alf/"
+    }
+  }
+}
