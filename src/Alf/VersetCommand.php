@@ -26,9 +26,9 @@ class VersetCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         try {
-            $response = (new Client())->get('https://api.aelf.org/v1/messes/2021-11-19/afrique');
-            $contents = json_decode($response->getBody()->getContents(), true);
-            echo json_encode($contents['messes'][0]['lectures'][0]);
+            $response = (new Client())->get(sprintf('https://api.aelf.org/v1/messes/%s/afrique',(new \DateTime())->format('Y-m-d')));
+	    $contents = $response->getBody()->getContents();
+	    echo $contents;
         } catch (GuzzleException $e) {
         }
 
